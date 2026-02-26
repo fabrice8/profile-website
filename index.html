@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -152,6 +151,12 @@
       color: var(--text-primary);
       line-height: 1.7;
       overflow-x: hidden;
+    }
+
+    a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 500;
     }
 
     /* Animated background */
@@ -445,7 +450,7 @@
     .hero-subtitle {
       color: var(--text-secondary);
       font-weight: 600;
-      font-size: 1rem;
+      font-size: 1.2rem;
       letter-spacing: 1px;
       text-transform: none;
       margin-bottom: 1rem;
@@ -557,7 +562,7 @@
     .btn {
       padding: 1rem 2.5rem;
       border: none;
-      border-radius: 50px;
+      /* border-radius: 50px; */
       font-weight: 700;
       font-size: 1rem;
       cursor: pointer;
@@ -685,6 +690,12 @@
       margin: 0 auto;
     }
 
+    #about {
+      /* padding: 8rem 5%; */
+      position: relative;
+      background: #000000;
+    }
+
     /* About Section */
     .about-content {
       display: grid;
@@ -703,19 +714,18 @@
       content: '';
       position: absolute;
       inset: -20px;
-      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-      border-radius: 12px;
+      /* background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); */
+      /* border-radius: 12px; */
       opacity: 0.2;
       filter: blur(40px);
     }
 
     .about-image img {
       width: 100%;
-      height: 500px;
       object-fit: cover;
-      border-radius: 12px;
+      /* border-radius: 12px; */
       position: relative;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(0, 0, 0, 0.1);
     }
 
     .about-text h3 {
@@ -900,6 +910,8 @@
       transition: all 0.4s ease;
       position: relative;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
     }
 
     .venture-card.featured {
@@ -984,6 +996,7 @@
     .venture-header h3 {
       font-size: 1.8rem;
       font-weight: 800;
+      line-height: 1;
       letter-spacing: -0.02em;
       margin-bottom: 0.25rem;
     }
@@ -1025,6 +1038,7 @@
       align-items: center;
       gap: 0.5rem;
       transition: all 0.3s ease;
+      margin-top: auto;
     }
 
     .venture-link ion-icon {
@@ -1128,6 +1142,118 @@
     }
 
     /* Experience Section */
+    .experience-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      align-items: start;
+    }
+
+    .experience-column-label {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+    }
+
+    .experience-quote-card {
+      color: var(--text-secondary);
+      background-color: var(--bg-primary);
+      font-style: italic;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      position: relative;
+      padding: 2rem 3rem;
+      z-index: 1;
+    }
+    .experience-quote-card::before {
+      content: '"';
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: 'Syne', sans-serif;
+      font-size: 10rem;
+      line-height: 1;
+      color: var(--accent-primary);
+      opacity: 0.1;
+    }
+
+    /* Experiments & Pivots Cards */
+    .pivots-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pivot-card {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      padding: 3rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .pivot-card:hover {
+      transform: translateY(-4px);
+      background-color: var(--bg-secondary);
+    }
+
+    .pivot-year {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--accent-burgundy);
+      margin-bottom: 0.75rem;
+      letter-spacing: 1px;
+    }
+
+    .pivot-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .pivot-tagline {
+      font-size: 0.85rem;
+      color: var(--text-primary);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .pivot-card p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .pivot-what-happened {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.75rem;
+    }
+
+    .pivot-lesson {
+      border-top: 1px solid #1a1a1a;
+      padding-top: 0.75rem;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    .pivot-lesson strong,
+    .pivot-what-happened strong {
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    @media (max-width: 968px) {
+      .experience-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+    }
+
     .timeline {
       max-width: 900px;
       margin: 0 auto;
@@ -1192,6 +1318,7 @@
     .timeline-content h3 {
       font-size: 1.5rem;
       font-weight: 700;
+      line-height: 1.2;
       letter-spacing: -0.01em;
       margin-bottom: 0.5rem;
     }
@@ -1205,6 +1332,69 @@
     .timeline-content p {
       color: var(--text-secondary);
       line-height: 1.7;
+    }
+
+    /* Pull Quote Block */
+    .pull-quote-block {
+      padding: 6rem 5%;
+      background: #000000;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pull-quote-block::before {
+      content: '"';
+      position: absolute;
+      top: -2rem;
+      left: 4%;
+      font-family: 'Syne', sans-serif;
+      font-size: 20rem;
+      line-height: 1;
+      color: var(--accent-primary);
+      opacity: 0.04;
+      pointer-events: none;
+    }
+
+    .pull-quote-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .pull-quote-text {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 600;
+      line-height: 1.7;
+      color: var(--text-primary);
+      font-style: italic;
+      letter-spacing: -0.01em;
+    }
+
+    .pull-quote-text em {
+      font-style: normal;
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .pull-quote-divider {
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+      margin-top: 2.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .pull-quote-block::before {
+        font-size: 12rem;
+      }
+
+      .pull-quote-text {
+        font-size: 1.2rem;
+      }
     }
 
     /* Testimonials Section */
@@ -1425,13 +1615,13 @@
     .contact-info {
       display: flex;
       flex-direction: column;
-      gap: 2.5rem;
+      gap: 1rem;
     }
 
     .contact-item {
       background: rgba(255, 255, 255, 0.02);
       padding: 2rem;
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(214, 193, 193, 0.05);
       border-radius: 0;
       transition: all 0.3s ease;
     }
@@ -1456,6 +1646,55 @@
 
     .contact-item a:hover {
       color: var(--accent-primary);
+    }
+
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .contact-icon ion-icon {
+      font-size: 1.5rem;
+      color: #0a0a0f;
+    }
+
+    /* Vision Section */
+    .vision-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .vision-content-wrapper {
+      display: grid;
+      grid-template-columns: 1.3fr 2fr;
+      align-items: start;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .vision-image {
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
+
+    .vision-image img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      /* border: 1px solid rgba(255, 255, 255, 0.1); */
+      filter: grayscale(20%);
+      transition: all 0.4s ease;
+    }
+
+    .vision-image:hover img {
+      filter: grayscale(0%);
+      transform: scale(1.02);
     }
 
     /* CTA Collaborate Section */
@@ -1503,13 +1742,13 @@
     .cta-features {
       display: flex;
       flex-direction: column;
-      gap: 2rem;
+      gap: 1rem;
     }
 
     .cta-feature {
       background: rgba(255, 255, 255, 0.03);
       padding: 2rem;
-      border-radius: 50px;
+      /* border-radius: 50px; */
       border: 1px solid rgba(255, 255, 255, 0.05);
       transition: all 0.3s ease;
     }
@@ -1768,7 +2007,7 @@
       }
 
       .timeline::before {
-        left: 30px;
+        left: 15px;
       }
 
       .timeline-item {
@@ -1776,12 +2015,12 @@
       }
 
       .timeline-content {
-        width: calc(100% - 80px);
-        margin-left: 80px;
+        width: calc(100% - 50px);
+        margin-left: 50px;
       }
 
       .timeline-dot {
-        left: 30px;
+        left: 15px;
       }
 
       .stats {
@@ -1806,6 +2045,9 @@
 
       .hero h1 {
         font-size: 3rem;
+      }
+      .hero-content {
+        margin-top: -3rem;
       }
 
       .cta-buttons {
@@ -1835,6 +2077,19 @@
         width: 100%;
       }
 
+      .contact-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .vision-content-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .vision-image {
+        display: none;
+      }
+
       .footer-grid {
         grid-template-columns: 1fr;
         gap: 2.5rem;
@@ -1858,7 +2113,6 @@
     }
   </style>
 </head>
-
 <body>
   <div class="bg-gradient"></div>
 
@@ -1891,7 +2145,7 @@
     <div class="hero-container">
       <div class="hero-content">
         <div class="hero-subtitle">Hello there! 👋</div>
-        <h1>I Am <span class="gradient-text">Fabrice</span></h1>
+        <h1>Fabrice <span class="gradient-text">Here.</span></h1>
         <h1 class="hero-role">Full Stack Developer</h1>
         <h1 class="hero-role">& Entrepreneur</h1>
         <p class="hero-description">
@@ -1914,7 +2168,7 @@
         </div>
       </div>
       <div class="hero-image">
-        <img src="assets/images/hero.png" alt="Fabrice K.E.M">
+        <img src="assets/images/fabrice-ekpetse-profile-sv.jpg" alt="Fabrice Ekpetse (K.E.M)">
       </div>
     </div>
   </section>
@@ -1927,18 +2181,18 @@
     </div>
     <div class="about-content">
       <div class="about-image">
-        <img src="assets/images/profile.jpg" alt="Fabrice K.E.M">
+        <img src="assets/images/fabrice-ekpetse-profile-fv.jpg" alt="Fabrice Ekpetse (K.E.M)">
       </div>
       <div class="about-text">
         <h3>From building frameworks to building businesses</h3>
         <p>
-          I started out creating open-source tools like LIPS.js, Kenx, and Cubic Studio because I wanted to make 
+          I started out creating open-source tools like LIPS.js, iframe.io, webview.io, Kenx, and Cubic Studio because I wanted to make 
           development easier for everyone. That same drive led me to start building companies that solve real problems.
         </p>
         <p>
-          These days, I'm focused on mobility and supply chain tech. With De., I'm building a platform that makes 
-          logistics actually work the way it should. Roll Mobility brings e-scooters to university campuses in Ghana, 
-          and Mijo Ride is coming soon to make getting around easier for everyone.
+          These days, I'm focused on mobility and supply chain tech. With <a href="#ventures">De.</a>, I'm building a platform that makes 
+          logistics actually work the way it should. Through HealMatrix, I'm tackling the fragmented healthcare infrastructure that affects 
+          millions across Africa. And Mijo Ride is coming soon to make getting around easier for everyone.
         </p>
         <p>
           I'm based in Accra, Ghana, and I still love contributing to open source when I can. It keeps me grounded 
@@ -1950,7 +2204,7 @@
             <div class="stat-label">Years Experience</div>
           </div>
           <div class="stat-item">
-            <div class="stat-number">3</div>
+            <div class="stat-number">4</div>
             <div class="stat-label">Active Ventures</div>
           </div>
           <div class="stat-item">
@@ -2065,8 +2319,8 @@
       <span class="section-tag">Business Ventures</span>
       <h2 class="section-title">Entrepreneurship</h2>
       <p class="section-description">
-        Building innovative solutions in mobility and supply chain technology that transform how people move and
-        businesses operate.
+        Building infrastructure-level solutions across logistics, mobility, and healthcare — because the systems that 
+        move people, goods, and care forward all need rebuilding from local perspectives.
       </p>
     </div>
     <div class="ventures-grid">
@@ -2084,8 +2338,8 @@
         <p class="venture-description">
           Complete platform for logistics and mobility execution. Features include Web & React Native SDKs,
           Map Service Interface (MSI), IoT backend with MQTT, real-time tracking, fleet management, warehouse
-          operations,
-          and comprehensive APIs for LSP, CSP, and IoT service providers. From freight to fleets, goods to mobility.
+          operations, and comprehensive APIs for LSP, CSP, and IoT service providers. From freight to fleets, 
+          goods to mobility.
         </p>
         <div class="venture-tags">
           <span class="tag">Supply Chain</span>
@@ -2102,26 +2356,27 @@
         <div class="venture-badge">Active</div>
         <div class="venture-header">
           <div class="venture-icon">
-            <ion-icon name="bicycle-outline"></ion-icon>
+            <ion-icon name="medical-outline"></ion-icon>
           </div>
           <div>
-            <h3>Roll Mobility</h3>
-            <p class="venture-tagline">Step Ahead. Let's Roll.</p>
+            <h3>Heal Matrix</h3>
+            <p class="venture-tagline">Healthcare Innovation Technology</p>
           </div>
         </div>
         <p class="venture-description">
-          E-scooter and bike sharing for university campuses. Partnering with KNUST and University of Legon
-          to create cleaner campuses and connected communities. Available on iOS and Android, providing students
-          with sustainable, safe, and convenient transportation across campus in minutes.
+          Healthcare in most places in Africa still runs on paperwork or fragmented systems, and missed connections 
+          between patients and care. HealMatrix is the infrastructure layer fixing that — starting with pharmacy and 
+          prescription management, clinical research recruitment, and blood bank operations. Built for the institutions 
+          that can't afford to wait for global health tech to catch up with local realities.
         </p>
         <div class="venture-tags">
-          <span class="tag">Micro-Mobility</span>
-          <span class="tag">Campus Solutions</span>
-          <span class="tag">Green Tech</span>
-          <span class="tag">Mobile Apps</span>
+          <span class="tag">Health Tech</span>
+          <span class="tag">Clinical Research</span>
+          <span class="tag">Pharmacy Management</span>
+          <span class="tag">Blood Bank Systems</span>
         </div>
-        <a href="https://rolloncampus.com" target="_blank" class="venture-link">
-          Visit Website <ion-icon name="arrow-forward-outline"></ion-icon>
+        <a href="#contact" class="venture-link">
+          Learn More <ion-icon name="arrow-forward-outline"></ion-icon>
         </a>
       </div>
 
@@ -2132,7 +2387,7 @@
             <ion-icon name="car-outline"></ion-icon>
           </div>
           <div>
-            <h3>Mijo Ride</h3>
+            <h3>Mijo<br>Ride</h3>
             <p class="venture-tagline">Smart Transit Solution</p>
           </div>
         </div>
@@ -2144,6 +2399,8 @@
           <span class="tag">Ride-Hailing</span>
           <span class="tag">Urban Mobility</span>
           <span class="tag">Smart Transport</span>
+          <span class="tag">Corporate Commuter</span>
+          <span class="tag">Long Trips</span>
         </div>
         <a href="https://mijoride.com" target="_blank" class="venture-link">
           Learn More <ion-icon name="arrow-forward-outline"></ion-icon>
@@ -2153,32 +2410,38 @@
   </section>
 
   <!-- Vision & Future Section -->
-  <section id="vision" style="background: var(--bg-primary); padding: 8rem 5%;">
+  <section id="vision" style="background: #000000; padding: 8rem 5%;">
     <div class="section-header">
       <span class="section-tag">What's Next</span>
-      <h2 class="section-title">Where I'm Headed</h2>
-      <p class="section-description">
+      <h2 class="section-title" style="padding:0 18%;line-height: 1.2;">The problems that keep me up at night</h2>
+      <!-- <p class="section-description">
         Building the future of mobility and supply chain in Africa, one solution at a time.
-      </p>
+      </p> -->
     </div>
     
-    <div style="max-width: 1000px; margin: 0 auto;">
-      <div style="margin-bottom: 4rem;">
-        <h3 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 1.5rem; line-height: 1.4;">
-          The problems that keep me up at night
-        </h3>
-        <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem;">
-          How do we make logistics actually work in emerging markets? How do we get people moving efficiently 
-          in cities that weren't built for modern transportation? These aren't just business questions—they're 
-          challenges that affect millions of people every day.
-        </p>
-        <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8;">
-          I'm focused on building infrastructure-level solutions that other companies can build on top of. 
-          Think AWS for logistics, or Stripe for mobility. The kind of platforms that make it easier for 
-          the next generation of founders to solve problems we haven't even thought of yet.
-        </p>
+    <div class="vision-content">
+      <div class="vision-content-wrapper">
+        <div style="margin-bottom: 4rem;">
+          <!-- <h3 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 1.5rem; line-height: 1.4;">
+            The problems that keep me up at night
+          </h3> -->
+          <p style="color: var(--text-secondary); font-size: 1.4rem; line-height: 1.8; margin-bottom: 1rem;">
+            How do we make logistics actually work in emerging markets? How do we get people moving efficiently 
+            in cities that weren't built for modern transportation? These aren't just business questions—they're 
+            challenges that affect millions of people every day.
+          </p>
+          <p style="color: var(--text-secondary); font-size: 1.4rem; line-height: 1.8;">
+            I'm focused on building infrastructure-level solutions that other companies can build on top of. 
+            Think AWS for logistics, or Stripe for mobility. The kind of platforms that make it easier for 
+            the next generation of founders to solve problems we haven't even thought of yet.
+          </p>
+        </div>
+      
+        <div class="vision-image">
+          <img src="assets/images/always-seeking-the-light.jpg" alt="Vision for the future" loading="lazy">
+        </div>
       </div>
-
+        
       <div style="margin-bottom: 4rem;">
         <h3 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 1.5rem; line-height: 1.4;">
           What I'm looking for
@@ -2237,7 +2500,7 @@
       <span class="section-tag">How I Build</span>
       <h2 class="section-title">My Approach</h2>
       <p class="section-description">
-        I value building things the right way—clean code, solid architecture, and tools 
+        It's simple. Build things the right way—clean code, solid architecture, and tools 
         that actually make developers' lives easier. No fluff, or perfection, just results.
       </p>
     </div>
@@ -2247,7 +2510,7 @@
         <h3>Frontend Development</h3>
         <p>I build interfaces that are fast and intuitive. Created my own UI framework (LIPS.js) because I wanted something better.</p>
         <ul class="skill-list">
-          <li>LIPS.js (Custom Framework)</li>
+          <li>LIPS.js, React, Solidjs, etc</li>
           <li>TypeScript, JavaScript (ES6+)</li>
           <li>HTML5, CSS3, SASS</li>
           <li>Responsive & Mobile-First Design</li>
@@ -2259,7 +2522,7 @@
         <p>Backend systems that scale. Built Kenx framework to make Node.js development faster and more reliable.</p>
         <ul class="skill-list">
           <li>Node.js (Kenx Framework)</li>
-          <li>TypeScript</li>
+          <li>TypeScript, Go, Python</li>
           <li>RESTful APIs & WebSockets</li>
           <li>Database Design & Optimization</li>
         </ul>
@@ -2283,7 +2546,7 @@
           <li>Code Splitting & Lazy Loading</li>
           <li>Image Optimization</li>
           <li>Caching Strategies</li>
-          <li>Lighthouse Audits</li>
+          <li>SEO & Accessibility Audits</li>
         </ul>
       </div>
       <div class="skill-card">
@@ -2291,7 +2554,7 @@
         <h3>DevOps & Deployment</h3>
         <p>Getting code from laptop to production smoothly. I automate the boring stuff so I can focus on building.</p>
         <ul class="skill-list">
-          <li>AWS, Google Cloud, Azure</li>
+          <li>AWS, DO, Google Cloud, Azure</li>
           <li>Docker, Kubernetes</li>
           <li>CI/CD Pipelines</li>
           <li>Git & Version Control</li>
@@ -2302,7 +2565,7 @@
         <h3>Mobile Development</h3>
         <p>Mobile apps that feel native. React Native lets me build once and ship everywhere—efficiency at its best.</p>
         <ul class="skill-list">
-          <li>React Native</li>
+          <li>Kotlin, React Native</li>
           <li>Progressive Web Apps</li>
           <li>Mobile-First Design</li>
           <li>App Store Deployment</li>
@@ -2315,65 +2578,198 @@
   <section id="experience">
     <div class="section-header">
       <span class="section-tag">My Journey</span>
-      <h2 class="section-title">Work Experience</h2>
+      <h2 class="section-title">Experiences</h2>
     </div>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="timeline-date">2022 - Present</div>
-          <h3>Founder & CEO</h3>
-          <h4>De. (Dedot.io)</h4>
-          <p>
-            Building the operating system for supply chain and mobility execution. Created comprehensive platform
-            with SDKs (Web & React Native), Map Service Interface (MSI), IoT backend with MQTT support, multi-tenant
-            workspace management, and full LSP API suite. Serving logistics providers, e-commerce platforms, and
-            IoT service providers with real-time tracking and fleet management solutions.
-          </p>
+
+    <div class="experience-grid">
+      <div>
+        <h3 class="experience-column-label">Actives</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">2025 - Present</div>
+              <h3>Founder & CEO</h3>
+              <h4>De. (Dedot.io)</h4>
+              <p>
+                Serving logistics & mobility service providers, commerce platforms, and
+                IoT service providers with real-time tracking, operations & fleet management solutions.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">2025 - Present</div>
+              <h3>Founder & CTO</h3>
+              <h4>HealMatrix</h4>
+              <p>
+                Conception & development of solutions to provide better pharmacy and prescriptions management, 
+                efficient clinical research recruitment system from pre-screening to retention of candidates, 
+                Blood Bank management system, and other health IT solutions.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">2022 - 2025</div>
+              <h3>Lead Solution Developer</h3>
+              <h4>Footprintts</h4>
+              <p>
+                Contributed in the development of solutions oriented to provide better internet accessibility and 
+                coverage in Africa, especially to rural communities.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">2021 - Present</div>
+              <h3>Founder & Consultant</h3>
+              <h4>SCOREX</h4>
+              <p>
+                A software company for building and deploying applications for government and public sector. 
+                With extended services of consultancy and research on e-government systems architecture, security, 
+                and data management.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">2019 - 2023</div>
+              <h3>CTO & Framework Creator</h3>
+              <h4>MyApp-Labs & Open Source</h4>
+              <p>
+                Created multiple open-source frameworks including LIPS.js, Kenx,
+                Cubic Studio, JSONX, and CropImage. Led development across organizations including
+                @pws-hub, @cubic-bubble, and @webmicros. Part of GitHub Developer Program.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">2015 - 2018</div>
+              <h3>Web Developer</h3>
+              <h4>Freelance & Contract Work</h4>
+              <p>
+                Built web applications and solutions for various clients. Specialized in full-stack JavaScript development,
+                responsive design, and API integration. Developed expertise in modern frameworks and established foundation
+                for future entrepreneurial ventures.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="timeline-date">2020 - Present</div>
-          <h3>Founder</h3>
-          <h4>Roll Mobility (rolloncampus.com)</h4>
-          <p>
-            Launched e-scooter and bike sharing service for university campuses. Partnered with KNUST and
-            University of Legon, providing students with sustainable, convenient transportation through mobile app.
-            Built end-to-end platform including rider app (iOS & Android), fleet management, and real-time GPS tracking.
-          </p>
+
+      <!-- Experiments & Pivots Column (1/3) -->
+      <div>
+        <div style="background-color: var(--bg-primary);margin-bottom: 2rem;">
+          <h3 class="experience-column-label" style="padding: 2rem 3rem 0 3rem;">Experiments & Pivots</h3>
+          <div class="pivots-list">
+            <div class="pivot-card">
+              <img src="assets/images/roll-mobility-project-icon.png" alt="Roll Mobility project's icon" style="width: 4rem;float: right;margin-left: 1rem;"/>
+
+              <div class="pivot-year">2023 - 2025</div>
+              <h3>Roll Mobility</h3>
+              <p class="pivot-tagline">E-scooter sharing service</p>
+              <p>Launched an e-scooter sharing service for university campuses — the app, the hardware, the whole thing.</p>
+              <div class="pivot-what-happened">
+                <strong>What happened: </strong>The university partnerships with KNUST and Legon didn't hold, and without institutional buy-in, the model couldn't move forward.
+              </div>
+              <div class="pivot-lesson">
+                <strong>Lesson: </strong>A good solution in the wrong environment is just an expensive prototype.
+              </div>
+            </div>
+
+            <div class="pivot-card">
+              <img src="assets/images/modela-project-icon.png" alt="Modela project's icon" style="width: 5.5rem;float: right;margin-left: 1rem;"/>
+
+              <div class="pivot-year">2023 - 2024</div>
+              <h3>Modela</h3>
+              <p class="pivot-tagline">Draw your app & deploy it</p>
+              <p>I was tired of the Figma-to-code gap and no-code tools that give you templates but not real control.</p>
+              <div class="pivot-what-happened">
+                <strong>What happened: </strong>Modela was meant to collapse design and development into one process — draw it, configure it, ship it
+              </div>
+              <div class="pivot-lesson">
+                <strong>Lesson: </strong>Some ideas are right but early. Timing and resources have to meet the ambition. Still in active development.
+              </div>
+            </div>
+
+            <div class="pivot-card">
+              <img src="assets/images/cubic-studio-project-icon.png" alt="Cubic Studio project's icon" style="width: 4rem;float: right;margin-left: 1rem;"/>
+
+              <div class="pivot-year">2022 - 2023</div>
+              <h3>Cubic Studio</h3>
+              <p class="pivot-tagline">Web-base IDE & sandbox</p>
+              <p>A browser-based IDE and sandbox for building remotely-embeddable web apps. It had a clear use case tied to an LMS project that was its primary market.</p>
+              <div class="pivot-what-happened">
+                <strong>What happened: </strong>When that LMS project pivoted, the studio lost its anchor and got shelved.
+              </div>
+              <div class="pivot-lesson">
+                <strong>Lesson: </strong>Building on top of someone else's roadmap is a risk. Validate your own market before you build.
+              </div>
+            </div>
+
+            <div class="pivot-card">
+              <img src="assets/images/wigo-project-icon.png" alt="Wigo project's icon" style="width: 4rem;float: right;margin-left: 1rem;"/>
+
+              <div class="pivot-year">2021 - 2024</div>
+              <h3>Wigo</h3>
+              <p class="pivot-tagline">Payment System</p>
+              <p>An e-wallet and payment portal built on a Mobile Money model. We built the full system, launched the app, and ran integrations with telecom providers.</p>
+              <div class="pivot-what-happened">
+                <strong>What happened: </strong>The fintech compliance maze hit — licenses, regulations, and capital requirements we weren't positioned to absorb.
+              </div>
+              <div class="pivot-lesson">
+                <strong>Lesson: </strong>Without substantial backing and deep regulatory networks, fintech will drain you before you gain traction.
+              </div>
+            </div>
+
+            <div class="pivot-card">
+              <img src="assets/images/xyclone-os-project-icon.png" alt="Xyclone OS project's icon" style="width: 4rem;float: right;margin-left: 1rem;"/>
+              
+              <div class="pivot-year">2017 - 2018</div>
+              <h3>Xyclone OS</h3>
+              <p class="pivot-tagline">Web-based operating system</p>
+
+              <p>A customizable web-based OS not tied to any single device — accessible from anywhere, configurable by the user.</p>
+              <div class="pivot-what-happened">
+                <strong>What happened: </strong>Got the interface and core features built, but hitting native OS capabilities without WebAssembly (which wasn't viable yet) was a hard ceiling.
+              </div>
+              <div class="pivot-lesson">
+                <strong>Lesson: </strong>Big-stack projects need proportional resources. This one gave me more than it cost me in learning.
+              </div>
+            </div>
+
+          </div>
         </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="timeline-date">2018 - 2022</div>
-          <h3>Full Stack Developer & Framework Creator</h3>
-          <h4>MyApp-Labs & Open Source</h4>
+
+        <!-- <div class="experience-quote-card">
           <p>
-            Created multiple open-source frameworks including LIPS.js (declarative UI framework), Kenx (Node.js
-            framework),
-            Cubic Studio (development environment), JSONX, and CropImage. Led development across organizations including
-            @pws-hub, @cubic-bubble, and @webmicros. Part of GitHub Developer Program.
+            Whether I failed or succeeded at something, I learn anyway!
           </p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="timeline-date">2015 - 2018</div>
-          <h3>Web Developer</h3>
-          <h4>Freelance & Contract Work</h4>
-          <p>
-            Built web applications and solutions for various clients. Specialized in full-stack JavaScript development,
-            responsive design, and API integration. Developed expertise in modern frameworks and established foundation
-            for future entrepreneurial ventures.
-          </p>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
+
+  <!-- Pull Quote -->
+  <div class="pull-quote-block">
+    <div class="pull-quote-inner">
+      <p class="pull-quote-text">
+        I've spent most of this journey walking a bridge I couldn't see. 
+        Not because I was certain it was there — but because 
+        <em>stopping wasn't an option.</em> 
+        More than once, the safety rope I was counting on was already gone. 
+        Turned out, it never was what was holding me up anyway.
+      </p>
+      <div class="pull-quote-divider"></div>
+    </div>
+  </div>
 
   <!-- Testimonials Section -->
   <!-- <section id="testimonials">
@@ -2542,7 +2938,7 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" style="background: #000000;">
+  <section id="contact" style="background: url('assets/images/tsw-op10.png') center center/cover no-repeat, #000000;">
     <div class="section-header">
       <span class="section-tag">Get In Touch</span>
       <h2 class="section-title">Let's Work Together</h2>
@@ -2561,18 +2957,16 @@
           <div class="contact-icon"><ion-icon name="call-outline"></ion-icon></div>
           <h4>Phone</h4>
           <p style="color: var(--text-secondary); margin: 0;">
-            <a href="tel:+233208667545" style="color: var(--text-secondary); text-decoration: none;">+233 20 866
-              7545</a><br>
-            <a href="tel:+233500771557" style="color: var(--text-secondary); text-decoration: none;">+233 50 077
-              1557</a>
-              <!-- <br>
+            <a href="tel:+233500771557" style="color: var(--text-secondary); text-decoration: none;">+233 50 077 1557</a><br>
+            <a href="tel:+233208667545" style="color: var(--text-secondary); text-decoration: none;">+233 20 866 7545</a>
+            <!-- <br>
             <a href="tel:+228904943" style="color: var(--text-secondary); text-decoration: none;">+228 90 49 43 43</a> -->
           </p>
         </div>
         <div class="contact-item">
           <div class="contact-icon"><ion-icon name="location-outline"></ion-icon></div>
           <h4>Location</h4>
-          <p style="color: var(--text-secondary);">Accra, Ghana</p>
+          <p style="color: var(--text-secondary);">Spintex - Accra, Ghana</p>
         </div>
       </div>
 
@@ -2593,7 +2987,7 @@
           <label for="message">Message</label>
           <textarea id="message" name="message" placeholder="Tell me about your project..." style="resize: none;" required></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Send Message</button>
+        <button type="submit" class="btn btn-primary" style="padding: 1.2rem 2.5rem;font-size: 1.2rem;">Send Message</button>
       </form>
     </div>
   </section>
@@ -2642,8 +3036,9 @@
           <h4>My Ventures</h4>
           <ul class="footer-links">
             <li><a href="https://dedot.io" target="_blank">De. Platform</a></li>
-            <li><a href="https://rolloncampus.com" target="_blank">Roll Mobility</a></li>
             <li><a href="https://mijoride.com" target="_blank">Mijo Ride</a></li>
+            <li><a href="https://healmatrix.com" target="_blank">Heal Matrix</a></li>
+            <li><a href="https://rolloncampus.com" target="_blank">Roll Mobility</a></li>
             <li><a href="https://github.com/fabrice8" target="_blank">GitHub</a></li>
           </ul>
         </div>
@@ -2658,7 +3053,7 @@
             </div>
             <div class="contact-info-item">
               <ion-icon name="call-outline"></ion-icon>
-              <span>+233 20 866 7545</span>
+              <span>+233 50 077 1557</span>
             </div>
             <div class="contact-info-item">
               <ion-icon name="location-outline"></ion-icon>
