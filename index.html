@@ -174,18 +174,6 @@
       animation: gradientShift 15s ease infinite;
     }
 
-    @keyframes gradientShift {
-
-      0%,
-      100% {
-        transform: translate(0, 0) scale(1);
-      }
-
-      50% {
-        transform: translate(30px, -30px) scale(1.1);
-      }
-    }
-
     /* Navigation */
     nav {
       position: fixed;
@@ -1609,7 +1597,7 @@
 
     .form-group textarea {
       min-height: 150px;
-      resize: vertical;
+      resize: none;
     }
 
     .contact-info {
@@ -2129,7 +2117,7 @@
         <li><a href="#organizations">Projects</a></li>
         <li><a href="#ventures">Ventures</a></li>
         <li><a href="#vision">Vision</a></li>
-        <li><a href="#contact" target="_blank" class="nav-cta">Let's Talk</a></li>
+        <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
       </ul>
 
       <button class="menu-toggle" aria-label="Toggle menu">
@@ -2762,10 +2750,9 @@
     <div class="pull-quote-inner">
       <p class="pull-quote-text">
         I've spent most of this journey walking a bridge I couldn't see. 
-        Not because I was certain it was there — but because 
-        <em>stopping wasn't an option.</em> 
-        More than once, the safety rope I was counting on was already gone. 
-        Turned out, it never was what was holding me up anyway.
+        Not because I was certain it was there — but because <em>stopping wasn't an option.</em> 
+        More than once, the safety rope was already gone. Turns out, 
+        it was never what was moving me forward.
       </p>
       <div class="pull-quote-divider"></div>
     </div>
@@ -2985,7 +2972,7 @@
         </div>
         <div class="form-group">
           <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Tell me about your project..." style="resize: none;" required></textarea>
+          <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
         </div>
         <button type="submit" class="btn btn-primary" style="padding: 1.2rem 2.5rem;font-size: 1.2rem;">Send Message</button>
       </form>
@@ -3037,7 +3024,7 @@
           <ul class="footer-links">
             <li><a href="https://dedot.io" target="_blank">De. Platform</a></li>
             <li><a href="https://mijoride.com" target="_blank">Mijo Ride</a></li>
-            <li><a href="https://healmatrix.com" target="_blank">Heal Matrix</a></li>
+            <li><a href="https://healmatrix.com" target="_blank">HealMatrix</a></li>
             <li><a href="https://rolloncampus.com" target="_blank">Roll Mobility</a></li>
             <li><a href="https://github.com/fabrice8" target="_blank">GitHub</a></li>
           </ul>
